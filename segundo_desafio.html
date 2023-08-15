@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+
+        var nome = (prompt('Qual é o seu nome? '))
+        var alt = (prompt('qual é a sua altura? '))
+        var peso = (prompt('Qual é o seu peso? '))
+        
+        alt = parseFloat(alt)
+        peso = parseFloat(peso)
+        alt = alt / 100
+
+        var imc = peso / (alt * alt)
+        var classicacao = ''
+
+        if(imc < 16) {
+            classicacao = 'Baixo peso, muito grave';
+        } else if(imc >= 16 && imc <= 16.99) {
+            classicacao = 'Baixo peso, grave';
+        } else if(imc >= 17 && imc <= 18.49) {
+            classicacao = 'Baixo peso';
+        }else if(imc >= 18.50 && imc <= 24.99) {
+            classicacao = 'Peso normal';
+        } else if(imc >= 25 && imc <= 29.99) {
+            classicacao = 'Sobrepeso';
+        }else if(imc >= 20 && ima <= 34.99) {
+            classicacao = 'Obesidade grau I';
+        }else if (imc >= 35 && imc <= 39.99){
+            classicacao = 'Obesidade grau II';
+        }else {
+            classicacao = 'Obesidade grau III'
+        }
+
+        document.write('Esse é seu nome ' + nome + ' sua altura ' + alt + ' seu peso é ' + peso + '<br/>')
+        document.write('Sua massa corporal é ' + classicacao)
+  
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
